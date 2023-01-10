@@ -13,7 +13,7 @@ from .date_resolver_dialog import DateResolverDialog
 
 from config import DefaultConfig
 import logging
-#from opencensus.ext.azure.log_exporter import AzureLogHandler
+from opencensus.ext.azure.log_exporter import AzureLogHandler
 
 CONFIG = DefaultConfig()
 INSTRUMENTATION_KEY = CONFIG.APPINSIGHTS_INSTRUMENTATION_KEY
@@ -33,9 +33,9 @@ class BookingDialog(CancelAndHelpDialog):
 
         self.logger = logging.getLogger(__name__)
         
-        #self.logger.addHandler(AzureLogHandler(
-         #   connection_string = INSTRUMENTATION_KEY)
-        #)
+        self.logger.addHandler(AzureLogHandler(
+            connection_string = INSTRUMENTATION_KEY)
+        )
 
         text_prompt = TextPrompt(TextPrompt.__name__)
 
