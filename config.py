@@ -8,7 +8,7 @@ import os
 
 class DefaultConfig:
     """Configuration for the bot."""
-    '''
+    
     PORT = 3978
     APP_ID = os.environ.get("MicrosoftAppId", "dbd267a0-1141-4087-8cf2-a77bd477d6bc")
     APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "b5319493-ba5e-4ed1-bace-0252c23ef634")
@@ -25,4 +25,4 @@ class DefaultConfig:
     LUIS_API_HOST_NAME = "p10evinstance.cognitiveservices.azure.com/"
     APPINSIGHTS_INSTRUMENTATION_KEY = "50159b95-fcaf-41cd-8359-66926b01bfe3"
 
-
+'''
